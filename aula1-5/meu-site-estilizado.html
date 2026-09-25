@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Site Estilizado</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        /* 1. SELETOR DE TAG & HERANÇA GLOBAL */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    background-color: #f4f6f9;
+    line-height: 1.6;
+}
+
+/* 2. TIPOGRAFIA */
+h1, h2, h3 {
+    color: #1a365d;
+    margin-bottom: 0.5rem;
+}
+
+/* 3. SELETOR DE ID */
+#titulo-pagina {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 4. SELETOR DE CLASSE EM TAG SEMÂNTICA */
+.destaque {
+    font-style: italic;
+    color: #4a5568;
+}
+
+section.cartao {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+/* 5. SELETOR DESCENDENTE */
+header nav a {
+    color: #2b6cb0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #718096;
+}
+    </style>
+</head>
+<body>
+    <header class="cabecalho-principal">
+        <h1 id="titulo-pagina">Desenvolvimento Web</h1>
+        <p class="destaque">Primeiros passos aplicando folhas de estilo em CSS3.</p>
+        <nav>
+            <ul>
+                <li><a href="#conteudo">Tecnologias</a></li>
+                <li><a href="#sobre">Sobre o Curso</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="conteudo" class="cartao">
+            <h2>Front-End Semântico</h2>
+            <article>
+                <h3>HTML5 + CSS3</h3>
+                <p>Com o CSS, nós transformamos uma estrutura semântica em uma interface atraente e legível.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Introdução ao Desenvolvimento Web | IEM01</p>
+    </footer>
+</body>
+</html>

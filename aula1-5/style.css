@@ -1,0 +1,68 @@
+/* Define a fonte principal e centraliza o conteúdo da página. */
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f8f8;
+  text-align: left;
+  margin: 0;
+  padding: 1rem 1rem;
+}
+
+a:hover { text-decoration: underline; }
+
+/* Mantém o conteúdo organizado e centralizado em telas maiores. */
+header,
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Centraliza a navegação e adiciona espaço entre os links. */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Remove o recuo padrão da lista e mantém seus itens centralizados. */
+ul {
+  list-style-position: inside;
+  padding: 0;
+}
+
+/* Centraliza a tabela e ocupa uma largura confortável do conteúdo. */
+table {
+  width: 100%;
+  margin: 1.5rem auto;
+  border-collapse: collapse;
+}
+
+/* Adiciona bordas e espaçamento para facilitar a leitura da tabela. */
+th,
+td {
+  border: 1px solid #cbd5d5;
+  padding: 0.75rem;
+}
+
+/* Mantém o estilo já existente para o destaque da página. */
+.card-destaque {
+  background: #00c83a;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.circulo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #3498db; /* Cor de fundo apenas para destacar */
+  color: white; 
+  display: flex;
+  justify-content: center; /* Centraliza na horizontal */
+  align-items: center;     /* Centraliza na vertical */
+  
+  /* Opcional: impede que palavras longas quebrem o círculo */
+  text-align: center;
+}
