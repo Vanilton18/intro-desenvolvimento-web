@@ -1,0 +1,42 @@
+🚀 Desafio Autônomo: Do Esqueleto à Identidade Visual (HTML5 + CSS3)
+Componente Curricular: Introdução ao Desenvolvimento Web | IEM01
+Professor: Vanilton Pinheiro
+Tempo estimado: 100 minutos
+Objetivo: Compreender os fundamentos do CSS3 na prática (vinculação externa, seletores, herança, especificidade e tipografia), aplicando estilo diretamente sobre uma estrutura semântica.
+📌 PARTE 1: Pesquisa Rápida & Investigação (25 min)
+Pesquise na documentação oficial (MDN Web Docs (https://developer.mozilla.org/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics) ou W3Schools (https://www.w3schools.com/)) e anote em um arquivo de texto simples (respostas.txt ou no caderno):A Tríade e a Metáfora: Por que dizemos que o HTML é o esqueleto e o CSS é a pele/vestimenta de uma página Web?As 3 Formas de CSS: Quais são as 3 formas de inserir CSS em uma página (inline, interno/<style> e folha externa via <link>)? Por que a folha externa é considerada a melhor prática profissional?Seletores e Hierarquia (Especificidade):
+Qual a diferença prática de aplicação entre um seletor de Tag (ex: p), um de Classe (ex: .destaque) e um de ID (ex: #titulo)?
+Se um elemento tiver uma cor definida por tag e outra por classe, qual delas vence e por quê?
+Unidades de Medida: Qual a diferença básica entre a unidade absoluta px (pixels) e a unidade relativa rem no dimensionamento de textos?
+💻 PARTE 2: Prática e Aplicação Visual (50 min)
+
+1. Preparação dos Arquivos
+Opção A (Recomendada): Abra a pasta do projeto da sua AV1 (A História dos Meus Pais) no VS Code.
+Opção B (Caso não esteja com o código da AV1): Crie um arquivo index.html com uma estrutura semântica simples contendo <header>, <nav>, <main>, <section>, <article> e <footer>.
+2. Criando o Vínculo com o CSS ExternoNa mesma pasta do seu index.html, crie uma subpasta chamada css/. Dentro de css/, crie o arquivo estilo.css. Conecte o arquivo dentro da tag <head> do seu index.html:
+HTML
+<link rel="stylesheet" href="css/estilo.css">
+3. Missão de Estilização
+No arquivo css/estilo.css, construa regras que atendam a todos os seguintes critérios:
+Regra Global (body):
+Escolha uma família tipográfica sem serifa limpa (ex: font-family: Arial, Helvetica, sans-serif;).
+Defina uma cor de fundo suave (ex: #f4f6f9 ou similar) e uma cor de texto principal em tom grafite escuro (ex: #333333).
+Ajuste o espaçamento de linha com line-height: 1.6; para melhorar a legibilidade.
+Títulos (h1, h2, h3):
+Aplique uma cor de destaque com bom contraste e defina a margem inferior em 0.5rem.
+Seções Semânticas (section ou article):
+Crie uma classe (ex: .cartao ou .secao-bloco) e aplique fundo branco (background-color: #ffffff;) e uma borda sutil (border: 1px solid #e2e8f0;).
+Navegação (nav a):
+Estilize os links do menu removendo o sublinhado padrão (text-decoration: none;), usando cor chamativa e negrito (font-weight: bold;).
+Tabela Semântica (table, th, td):
+Aplique uma cor de fundo suave para o cabeçalho (th) e garanta que o texto esteja alinhado corretamente.
+Rodapé (footer):
+Alinhe o texto ao centro (text-align: center;) com tamanho reduzido (font-size: 0.85rem;) e cor mais discreta.
+🔍 PARTE 3: O Laboratório do Detetive (DevTools) (15 min)
+
+
+Abra a sua página no navegador Google Chrome (ou similar) e acione as Ferramentas do Desenvolvedor (F12 ou botão direito > Inspecionar):Inspecionando Regras: Na aba Elements/Styles, clique no seu título principal <h1> e confira a caixa de estilos. Observe como as propriedades herdadas de body aparecem listadas. O Experimento da Especificidade:
+No final do seu estilo.css, adicione a seguinte linha:CSSp { color: red; }
+Volte ao navegador e recarregue.
+Procure um parágrafo que já possuía uma classe definida (como .destaque).
+No painel de estilos do DevTools, verifique se a cor do texto desse parágrafo mudou para vermelho ou se permaneceu na cor da classe. Observe qual regra aparece riscada (sobrescrita) no DevTools!

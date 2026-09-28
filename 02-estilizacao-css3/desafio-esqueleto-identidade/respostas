@@ -1,0 +1,75 @@
+O HTML pode ser comparado ao esqueleto de uma página Web porque é responsável por estruturar e organizar o conteúdo. Ele define elementos como títulos, parágrafos, imagens, menus, seções e rodapés.
+
+O CSS pode ser comparado à pele ou à vestimenta porque é responsável pela aparência da página. Com CSS podemos definir cores, fontes, tamanhos, espaçamentos, bordas, posicionamentos e outros aspectos visuais.
+
+Assim, o HTML define a estrutura e o conteúdo, enquanto o CSS define principalmente a apresentação visual dessa estrutura.
+
+As 3 Formas de CSS
+
+Existem três formas principais de inserir CSS em uma página:
+
+CSS inline: o estilo é colocado diretamente no elemento HTML por meio do atributo style. Exemplo:
+
+<p style="color: red;">Texto</p>
+
+CSS interno: as regras são colocadas dentro de uma tag <style>, normalmente localizada no <head> do documento HTML. Exemplo:
+
+<style> p { color: red; } </style>
+
+CSS externo: as regras ficam em um arquivo separado, com extensão .css, que é conectado ao HTML usando a tag <link>. Exemplo:
+
+<link rel="stylesheet" href="css/estilo.css">
+
+A folha de estilo externa é considerada uma boa prática profissional porque permite separar a estrutura HTML da apresentação visual. Além disso, um mesmo arquivo CSS pode ser utilizado por várias páginas, facilitando a manutenção, a organização e a reutilização dos estilos.
+
+Seletores e Hierarquia (Especificidade)
+
+O seletor de Tag, como p, seleciona todos os elementos daquele tipo existentes na página. Por exemplo:
+
+p {
+color: blue;
+}
+
+O seletor de Classe, como .destaque, seleciona todos os elementos que possuem aquela classe. Uma classe pode ser utilizada em vários elementos diferentes.
+
+.destaque {
+color: red;
+}
+
+O seletor de ID, como #titulo, seleciona um elemento que possui aquele ID. O ID normalmente identifica um elemento específico da página.
+
+#titulo {
+color: green;
+}
+
+Em relação à especificidade, de forma simplificada, um seletor de ID possui maior especificidade que um seletor de classe, que por sua vez possui maior especificidade que um seletor de tag.
+
+Se um elemento tiver uma cor definida por uma tag e outra por uma classe, a regra da classe vence porque o seletor de classe possui maior especificidade que o seletor de tag.
+
+Por exemplo:
+
+p {
+color: blue;
+}
+
+.destaque {
+color: red;
+}
+
+<p class="destaque">Texto</p>
+
+Nesse caso, o texto ficará vermelho.
+
+Unidades de Medida
+
+O px (pixel) é uma unidade de medida absoluta no contexto do CSS. Ele permite definir um tamanho específico em pixels, como:
+
+font-size: 16px;
+
+O rem é uma unidade relativa ao tamanho da fonte do elemento raiz do documento, normalmente o elemento <html>. Por padrão, muitos navegadores utilizam 16px como tamanho de fonte inicial, portanto:
+
+1rem = 16px
+
+quando o tamanho padrão do elemento <html> é 16px.
+
+Por ser uma unidade relativa, o rem facilita a criação de layouts mais flexíveis e acessíveis, especialmente quando o usuário altera o tamanho padrão das fontes do navegador.

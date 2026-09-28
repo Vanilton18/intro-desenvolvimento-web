@@ -1,0 +1,97 @@
+/* Regra global */
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #f4f6f9;
+color: #333333;
+line-height: 1.6;
+margin: 0;
+padding: 0;
+}
+
+/* Títulos */
+h1,
+h2,
+h3 {
+color: #540a72;
+margin-bottom: 0.5rem;
+}
+
+/* Cabeçalho */
+header {
+background-color: #ffffff;
+padding: 2rem;
+text-align: center;
+border-bottom: 1px solid #e2e8f0;
+}
+
+/* Navegação */
+nav {
+background-color: #1e293b;
+padding: 1rem;
+text-align: center;
+}
+
+nav a {
+color: #b538f8;
+text-decoration: none;
+font-weight: bold;
+margin: 0 1rem;
+}
+
+nav a:hover {
+color: #ffffff;
+}
+
+/* Conteúdo principal */
+main {
+max-width: 900px;
+margin: 2rem auto;
+padding: 0 1rem;
+}
+
+/* Seções e artigos */
+.cartao {
+background-color: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 8px;
+padding: 1.5rem;
+margin-bottom: 1.5rem;
+}
+
+/* Parágrafo em destaque */
+.destaque {
+color: #7c3aed;
+font-weight: bold;
+}
+
+/* Tabela */
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 1rem;
+}
+
+th,
+td {
+border: 1px solid #e2e8f0;
+padding: 0.75rem;
+text-align: left;
+}
+
+th {
+background-color: #e0f2fe;
+color: #8a3eb0;
+}
+
+/* Rodapé */
+footer {
+text-align: center;
+font-size: 0.85rem;
+color: #9e74cc;
+padding: 1.5rem;
+}
+
+/* Experimento de especificidade */
+p {
+color: rgb(101, 25, 113);
+}
