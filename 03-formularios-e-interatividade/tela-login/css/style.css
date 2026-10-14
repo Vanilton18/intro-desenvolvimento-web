@@ -1,0 +1,212 @@
+/* ==========================================================================
+   1. REGRA GLOBAL & HERANÇA (Especificidade baixa: tag)
+   ========================================================================== */
+html {
+    font-size: 16px; /* Referencial de 1rem = 16px */
+    box-sizing: border-box; /* 1. Define o padrão inteligente no topo da aplicação */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* 2. Diz para todos os elementos herdarem o comportamento do pai */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e293b;
+    line-height: 1.5;
+    /* Fundo gradiente linear suave inspirado na imagem anexada */
+    background: linear-gradient(135deg, #00796B 0%, #00A896 35%, #00C853 75%, #00E676 100%);
+    background-attachment: fixed;
+}
+
+/* ==========================================================================
+   2. CONTÊINER & CARTÃO (Efeito Glassmorphism com contraste)
+   ========================================================================== */
+.container-login {
+    min-height: 100vh; /* Relativo à tela: 100% da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.cartao-login {
+    background: rgba(255, 255, 255, 0.92); /* Fundo claro translúcido */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda sutil de 1px */
+    border-radius: 12px;
+    padding: 2.2rem;
+    box-shadow: 0 16px 36px rgba(0, 75, 86, 0.25);
+}
+
+/* ==========================================================================
+   3. CABEÇALHO, LOGO E TIPOGRAFIA
+   ========================================================================== */
+.cabecalho-login {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.area-logo {
+    margin: 0 auto 0.75rem auto;
+}
+
+.area-logo img {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.titulo {
+    font-size: 1.6rem;
+    color: #004B56; /* Tom escuro da paleta para hierarquia e contraste */
+    margin: 0 0 0.35rem 0;
+}
+
+.subtitulo {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin: 0;
+}
+
+/* ==========================================================================
+   4. CAMPOS DO FORMULÁRIO E ESTADOS (:focus)
+   ========================================================================== */
+.campo-grupo {
+    margin-bottom: 1.2rem;
+}
+
+.campo-grupo label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: bold;
+    color: #004B56;
+    margin-bottom: 0.35rem;
+}
+
+.campo-grupo input[type="email"],
+.campo-grupo input[type="password"] {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    font-size: 0.95rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* Destaque visual no foco para acessibilidade e navegação por teclado */
+.campo-grupo input[type="email"]:focus,
+.campo-grupo input[type="password"]:focus {
+    border-color: #00A896;
+}
+
+.campo-lembrete {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.4rem;
+    font-size: 0.88rem;
+    color: #334155;
+}
+
+/* ==========================================================================
+   5. BOTÃO DE AÇÃO & CORES (HSL e Named Colors)
+   ========================================================================== */
+.botao-entrar {
+    width: 100%;
+    background-color: hsl(142, 100%, 39%); /* Verde vibrante da paleta */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75em 1.5em; /* em: proporcional à própria fonte */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-entrar:hover {
+    background-color: hsl(142, 100%, 32%); /* Escurece sutilmente no hover */
+}
+
+/* ==========================================================================
+   6. RODAPÉ E LINKS
+   ========================================================================== */
+.rodape-login {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #4a5568;
+}
+
+.link-acao {
+    color: #00796B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-acao:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   7. FEEDBACK DINÂMICO (JavaScript)
+   ========================================================================== */
+.texto-erro {
+    display: block;
+    font-size: 0.78rem;
+    color: rgb(230, 26, 141); /* Magenta da paleta para alertas de erro */
+    margin-top: 0.25rem;
+    min-height: 1rem;
+}
+
+.mensagem-status {
+    padding: 0.7rem;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.mensagem-status.erro {
+    display: block;
+    background-color: #ffe4e6;
+    color: rgb(230, 26, 141);
+    border: 1px solid rgb(230, 26, 141);
+}
+
+.mensagem-status.sucesso {
+    display: block;
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 1px solid #86efac;
+}
+
+/* ==========================================================================
+   8. MEDIA QUERY (Responsividade para Telas Pequenas)
+   ========================================================================== */
+/* Se a largura da tela for igual ou menor que 480px (smartphones) */
+@media screen and (max-width: 480px) {
+    .container-login {
+        padding: 1rem;
+    }
+
+    .cartao-login {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .titulo {
+        font-size: 1.4rem;
+    }
+
+    .area-logo img {
+        width: 60px;
+        height: 60px;
+    }
+}

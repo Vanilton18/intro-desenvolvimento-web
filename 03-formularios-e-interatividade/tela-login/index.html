@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso ao Sistema | Login</title>
+    <!-- Vínculo da folha de estilos CSS externa -->
+    <!--<link rel="stylesheet" href="css/style.css">-->
+</head>
+<body>
+
+    <main class="container-login">
+        
+        <!-- Cartão central de login com acabamento translúcido -->
+        <section class="cartao-login">
+            
+            <header class="cabecalho-login">
+                <!-- Logomarca com imagem local e acessibilidade textual -->
+                <figure class="area-logo">
+                    <img src="img/logo-fpf-educacional.png" alt="Logomarca com símbolo infinito estilizado nas cores verde e ciano">
+                </figure>
+                <h1 class="titulo">Área Restrita</h1>
+                <p class="subtitulo">Informe suas credenciais para continuar.</p>
+            </header>
+
+            <!-- Área de feedback manipulada dinamicamente pelo JavaScript -->
+            <p id="mensagem-status" class="mensagem-status" aria-live="polite"></p>
+
+            <form id="formulario-login" action="#" method="post" novalidate>
+                
+                <section class="campo-grupo">
+                    <label for="campo-usuario">E-mail ou Usuário</label>
+                    <input 
+                        type="email" 
+                        id="campo-usuario" 
+                        name="usuario" 
+                        placeholder="exemplo@dominio.com" 
+                        required 
+                        autocomplete="username">
+                    <small id="erro-usuario" class="texto-erro"></small>
+                </section>
+
+                <section class="campo-grupo">
+                    <label for="campo-senha">Senha</label>
+                    <input 
+                        type="password" 
+                        id="campo-senha" 
+                        name="senha" 
+                        placeholder="Digite sua senha" 
+                        required 
+                        autocomplete="current-password">
+                    <small id="erro-senha" class="texto-erro"></small>
+                </section>
+
+                <section class="campo-lembrete">
+                    <input type="checkbox" id="lembrar-acesso" name="lembrar">
+                    <label for="lembrar-acesso">Lembrar de mim</label>
+                </section>
+
+                <button type="submit" id="botao-entrar" class="botao-entrar">Entrar</button>
+
+            </form>
+
+            <footer class="rodape-login">
+                <a href="#recuperar-senha" class="link-acao">Esqueceu sua senha?</a>
+                <p>Ainda não possui conta? <a href="#cadastro" class="link-acao">Cadastre-se</a></p>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

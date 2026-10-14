@@ -1,0 +1,25 @@
+html {
+    font-size: 16px; /* Referencial de 1rem = 16px */
+    box-sizing: border-box; /* 1. Define o padrão inteligente no topo da aplicação */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* 2. Diz para todos os elementos herdarem o comportamento do pai */
+}
+
+
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 24px;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.campo.largura-total { grid-column: 1 / -1; }
+.campo.largura-total { display: flex; gap: 12px; }
+
+@media (max-width: 640px) {
+  .formulario { grid-template-columns: 1fr; padding: 16px; }
+}
