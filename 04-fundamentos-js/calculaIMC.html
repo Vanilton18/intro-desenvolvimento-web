@@ -1,0 +1,30 @@
+<script>
+
+    let altura = parseFloat(prompt("Qual é a sua altura (em metros)?"));
+    let peso = parseFloat(prompt("Qual é o seu peso (em kg)?"));
+    // TODO realizar o calculo do IMC (Índice de Massa Corporal) e exibir o resultado na tela
+    function calcularIMC(altura, peso) {
+        let imc = peso / (altura * altura);
+        return imc;
+
+    }
+
+    function exibirNivelIMC(imc) {
+        if (imc < 18.5) {
+            document.write("Você está abaixo do peso. <br>");
+        }
+        if (imc >= 18.5 && imc < 24.9) {
+            document.write("Você está com o peso normal.<br>");
+        }
+        if (imc >= 25 && imc < 29.9) {
+            document.write("Você está com sobrepeso.<br>");
+        } else {
+            document.write("Você está obeso.<br>");
+        }
+    }
+
+    let imc = calcularIMC(altura, peso);
+    document.write("O seu IMC é: " + imc.toFixed(2) + "<br>");
+    exibirNivelIMC(imc);
+
+</script>

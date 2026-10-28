@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+    
+    var nome = prompt("Qual é o seu nome?");
+    var idade = parseInt(prompt("Qual é a sua idade?"));
+    document.write("Olá " + nome + "! <br> Bem-vindo ao JavaScript.");
+    document.write("<br> Você tem " + idade + " anos.");
+    
+    // Qual o ano de nascimento do usuário?
+    function calcularAnoNascimento(idade) {
+        var anoAtual = new Date().getFullYear();
+        return anoAtual - idade;
+    }
+    
+    var anoDeNascimento = calcularAnoNascimento(idade)
+    document.write("<br> Você nasceu em " + anoDeNascimento + ".");
+
+    var tanque = parseFloat(prompt("Qual é a capacidade do tanque de combustível do seu carro (em litros)?"));
+    var consumoAlcool = parseFloat(prompt("Qual é o consumo do seu carro com álcool (km/l)?"));
+    var consumoGasolina = parseFloat(prompt("Qual é o consumo do seu carro com gasolina (km/l)?"));
+    var precoAlcool = parseFloat(prompt("Qual é o preço do álcool (R$/l)?"));
+    var precoGasolina = parseFloat(prompt("Qual é o preço da gasolina (R$/l)?"));
+    alert("O preço do álcool é: R$ " + precoAlcool.toFixed(1) + " e o preço da gasolina é: R$ " + precoGasolina.toFixed(1));
+    var custoAlcool = ((tanque / consumoAlcool) * precoAlcool) * 10;
+    var custoGasolina = ((tanque / consumoGasolina) * precoGasolina) * 10;
+    document.write("<br> O custo para encher o tanque com álcool é: R$" + custoAlcool.toFixed(2));
+    document.write("<br> O custo para encher o tanque com gasolina é: R$" + custoGasolina.toFixed(2));
+    
+</script>
