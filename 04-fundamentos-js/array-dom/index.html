@@ -6,9 +6,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <h1>Lista de Tarefas</h1>
-        <ul id="lista-tarefas"></ul>
+    <main class="container">
+        <section class="cartao">
+            <h1>Lista de Tarefas</h1>
+            <p>Adicione suas tarefas abaixo:</p>
+            <div class="linha-entrada">
+                <input type="text" id="campo-tarefa" placeholder="Digite uma nova tarefa">
+                <button id="botao-adicionar">Adicionar</button>
+                <button id="botao-limpar">Limpar Lista</button>
+            </div>
+            <div class="lista-tarefas">
+                <ul id="lista-tarefas"></ul>
+            </div>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>
