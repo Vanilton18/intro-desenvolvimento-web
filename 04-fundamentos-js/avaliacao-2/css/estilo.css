@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+}
+
+.cartao {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 1.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.cabecalho {
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.cabecalho h1 {
+    font-size: 1.6rem;
+    color: #0f172a;
+}
+
+.subtitulo {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* Formulário em linha */
+.formulario {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.formulario input {
+    flex: 1;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.95rem;
+    border: 1px solid #94a3b8;
+    border-radius: 4px;
+    outline: none;
+}
+
+.formulario input:focus {
+    border-color: #2563eb;
+}
+
+.formulario button {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.65rem 1.1rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Acessibilidade visual para o label */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* Mensagem de alerta (controlada pelo JS) */
+.alerta {
+    font-size: 0.85rem;
+    min-height: 1.25rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.alerta.erro {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Contador */
+.resumo {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Lista dinâmica */
+.lista {
+    list-style: none;
+}
+
+.lista li {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.lista li:hover {
+    background-color: #f1f5f9;
+}
+
+/* Classe alternada via JS ao clicar no item */
+.lista li.comprado {
+    background-color: #dcfce7;
+    border-color: #86efac;
+    color: #166534;
+    text-decoration: line-through;
+}

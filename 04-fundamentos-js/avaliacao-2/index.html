@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV2 - Lista de Compras Interativa</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <main class="container">
+        <section class="cartao">
+            <header class="cabecalho">
+                <h1>Lista de Compras</h1>
+                <p class="subtitulo">Adicione itens e clique neles para marcar como comprados.</p>
+            </header>
+
+            <!-- Formulário de inclusão -->
+            <form id="form-item" class="formulario" novalidate>
+                <label for="campo-produto" class="sr-only">Nome do Produto</label>
+                <input 
+                    type="text" 
+                    id="campo-produto" 
+                    placeholder="Ex: Leite Integral 1L..." 
+                    autocomplete="off"
+                >
+                <button type="submit" id="btn-adicionar">Adicionar</button>
+            </form>
+
+            <!-- Área de feedback de validação -->
+            <p id="mensagem-alerta" class="alerta" aria-live="polite"></p>
+
+            <!-- Barra de resumo -->
+            <section class="resumo">
+                <p>Total de itens na lista: <strong id="total-itens">0</strong></p>
+            </section>
+
+            <!-- Lista onde o JS inserirá os elementos <li> -->
+            <ul id="lista-compras" class="lista"></ul>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
